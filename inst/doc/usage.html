@@ -12,7 +12,7 @@
 
 <meta name="author" content="Bernhard Meindl" />
 
-<meta name="date" content="2019-02-26" />
+<meta name="date" content="2019-03-07" />
 
 <title>Usage of the sdcHierarchies-Package</title>
 
@@ -92,7 +92,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">Usage of the sdcHierarchies-Package</h1>
 <h4 class="author"><em>Bernhard Meindl</em></h4>
-<h4 class="date"><em>2019-02-26</em></h4>
+<h4 class="date"><em>2019-03-07</em></h4>
 
 
 
@@ -107,7 +107,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="create-and-modify-a-hierarchy-from-scratch" class="section level2">
 <h2>Create and modify a hierarchy from scratch</h2>
 <p><code>hier_create()</code> allows to create a hierarchy. Argument <code>root</code> specifies the name of the root node. Optionally, it is possible to add some nodes to the top-level by listing their names in argument <code>node_labs</code>. Also, <code>hier_display()</code> shows the hierarchical structure of the current tree as shown below:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">h &lt;-<span class="st"> </span><span class="kw">hier_create</span>(<span class="dt">root =</span> <span class="st">&quot;Total&quot;</span>, <span class="dt">nodes =</span> LETTERS[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>])
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">h &lt;-<span class="st"> </span><span class="kw">hier_create</span>(<span class="dt">root =</span> <span class="st">&quot;Total&quot;</span>, <span class="dt">nodes =</span> LETTERS[<span class="dv">1</span>:<span class="dv">5</span>])
 <span class="kw">hier_display</span>(h)</code></pre></div>
 <pre><code>## Total
 ## ├─A
@@ -151,7 +151,7 @@ h &lt;-<span class="st"> </span><span class="kw">hier_rename</span>(h, <span cla
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># about a specific node</span>
 info &lt;-<span class="st"> </span><span class="kw">hier_info</span>(h, <span class="dt">nodes =</span> <span class="kw">c</span>(<span class="st">&quot;b1&quot;</span>, <span class="st">&quot;E&quot;</span>))</code></pre></div>
 <p><code>info</code> is a named list where each list element refers to a queried node. The results for level <code>b1</code> could be extracted as shown below:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">info<span class="op">$</span>b1</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">info$b1</code></pre></div>
 <pre><code>## $name
 ## [1] &quot;b1&quot;
 ## 
@@ -184,9 +184,9 @@ info &lt;-<span class="st"> </span><span class="kw">hier_info</span>(h, <span cl
 <h2>Convert to other formats</h2>
 <p>Function <code>hier_convert()</code> takes a hierarchy and allows to convert the network based structure to different formats while <code>hier_export()</code> does the conversion and writes the results to a file on the disk. The following formats are currently supported:</p>
 <ul>
-<li><code>df</code>: a “@;label”-based format that can be used in <a href="https://cran.r-project.org/package=sdcTable"><strong>sdcTable</strong></a></li>
+<li><code>df</code>: a <a href="mailto:%22@;label%22-based">&quot;@;label&quot;-based</a> format that can be used in <a href="https://cran.r-project.org/package=sdcTable"><strong>sdcTable</strong></a></li>
 <li><code>dt</code>: the same as <code>df</code>, but the result is returned as a </li>
-<li><code>argus</code>: also a “@;label”-based format that used to create hrc-files suitable for <a href="https://github.com/sdcTools/tauargus/"><span class="math inline">\(\tau\)</span>-argus</a></li>
+<li><code>argus</code>: also a <a href="mailto:%22@;label%22-based">&quot;@;label&quot;-based</a> format that used to create hrc-files suitable for <a href="https://github.com/sdcTools/tauargus/"><span class="math inline">\(\tau\)</span>-argus</a></li>
 <li><code>json</code>: a json-encoded string</li>
 <li><code>code</code>: the required code to re-build the current hierarchy</li>
 <li><code>sdc</code>: a <code>list</code> which is a suitable input for <a href="https://cran.r-project.org/package=sdcTable"><strong>sdcTable</strong></a></li>
@@ -434,11 +434,11 @@ v1 &lt;-<span class="st"> </span><span class="kw">hier_compute</span>(
 <p>We also note that there is another way to specify the inputs in <code>hier_compute()</code>. Setting argument <code>method = &quot;list&quot;</code> allows to create a hierarchy from a given named list. In such a list, the name of a list element is interpreted as the name of the parent node of all codes of the specific list element. An example is shown below:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">yae_ll &lt;-<span class="st"> </span><span class="kw">list</span>()
 yae_ll[[<span class="st">&quot;Total&quot;</span>]] &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;1.&quot;</span>, <span class="st">&quot;2.&quot;</span>, <span class="st">&quot;3.&quot;</span>)
-yae_ll[[<span class="st">&quot;1.&quot;</span>]] &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;1.&quot;</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">9</span>, <span class="st">&quot;.&quot;</span>)
-yae_ll[[<span class="st">&quot;1.1.&quot;</span>]] &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;1.1.&quot;</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">2</span>, <span class="st">&quot;.&quot;</span>)
-yae_ll[[<span class="st">&quot;1.2.&quot;</span>]] &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;1.2.&quot;</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="st">&quot;.&quot;</span>)
-yae_ll[[<span class="st">&quot;1.3.&quot;</span>]] &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;1.3.&quot;</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="st">&quot;.&quot;</span>)
-yae_ll[[<span class="st">&quot;1.4.&quot;</span>]] &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;1.4.&quot;</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">6</span>, <span class="st">&quot;.&quot;</span>)
+yae_ll[[<span class="st">&quot;1.&quot;</span>]] &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;1.&quot;</span>, <span class="dv">1</span>:<span class="dv">9</span>, <span class="st">&quot;.&quot;</span>)
+yae_ll[[<span class="st">&quot;1.1.&quot;</span>]] &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;1.1.&quot;</span>, <span class="dv">1</span>:<span class="dv">2</span>, <span class="st">&quot;.&quot;</span>)
+yae_ll[[<span class="st">&quot;1.2.&quot;</span>]] &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;1.2.&quot;</span>, <span class="dv">1</span>:<span class="dv">5</span>, <span class="st">&quot;.&quot;</span>)
+yae_ll[[<span class="st">&quot;1.3.&quot;</span>]] &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;1.3.&quot;</span>, <span class="dv">1</span>:<span class="dv">5</span>, <span class="st">&quot;.&quot;</span>)
+yae_ll[[<span class="st">&quot;1.4.&quot;</span>]] &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;1.4.&quot;</span>, <span class="dv">1</span>:<span class="dv">6</span>, <span class="st">&quot;.&quot;</span>)
 d &lt;-<span class="st"> </span><span class="kw">hier_compute</span>(<span class="dt">inp =</span> yae_ll, <span class="dt">root =</span> <span class="st">&quot;Total&quot;</span>, <span class="dt">method =</span> <span class="st">&quot;list&quot;</span>) </code></pre></div>
 <pre><code>## Argument 'dim_spec' is ignored when constructing a hierarchy from a nested list.</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hier_display</span>(d)</code></pre></div>

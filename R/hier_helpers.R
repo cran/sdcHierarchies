@@ -16,8 +16,10 @@
 
 # checks if the given tree is valid
 .is_valid <- function(tree) {
-  stopifnot(is.data.table(tree))
-  stopifnot(inherits(tree, "sdc_hierarchy"))
+  if (!inherits(tree, "sdc_hierarchy")) {
+    e <- "The provided input `tree` is not a sdc_hierarchy object."
+    stop(e, call. = FALSE)
+  }
 
   # check only one rootnode
   if (nrow(tree) > 0) {
@@ -87,7 +89,7 @@
   parent <- tree$root[ii]
 
   res <- tree$leaf[tree$root == parent]
-  res <- setdiff(res, c(leaf, NA))
+  res <- setdiff(res, c(leaf, parent))
   if (length(res) == 0) {
     return(character())
   }
