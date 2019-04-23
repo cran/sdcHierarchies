@@ -110,6 +110,21 @@ yae_ll[["1.4."]] <- paste0("1.4.", 1:6, ".")
 d <- hier_compute(inp = yae_ll, root = "Total", method = "list") 
 hier_display(d)
 
+## ------------------------------------------------------------------------
+h1 <- hier_create("Total", nodes = LETTERS[1:3])
+h1 <- hier_add(h1, root = "A", node = "a1")
+h1 <- hier_add(h1, root = "a1", node = "aa1")
+
+h2 <- hier_create("Total", letters[1:5])
+h2 <- hier_add(h2, root = "b", node = "b1")
+h2 <- hier_add(h2, root = "d", node = "d1")
+
+## ------------------------------------------------------------------------
+hier_grid(h1, h2)
+
+## ------------------------------------------------------------------------
+hier_grid(h1, h2, add_dups = FALSE, add_levs = TRUE)
+
 ## ---- eval=FALSE---------------------------------------------------------
-#  d <- sdcHier(d)
+#  d <- hier_app(d)
 

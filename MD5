@@ -1,6 +1,6 @@
-7c9983a4839afb1f6a06a6a6d4233407 *DESCRIPTION
-cf3a026f33b0797089fa2dc79eb04c71 *NAMESPACE
-81a7795d1050b9634b7dc46b3dbd3ecd *NEWS.md
+dbc2d20a72808d07dbb60c496b3f6411 *DESCRIPTION
+c2326b024892d35a4e6c50951611ecb0 *NAMESPACE
+c68d5ad7208c85675c6e38204e38726a *NEWS.md
 cc2325a1f691f191a2e5984c6a8d770d *R/0imports.R
 1c9423882af1d899f495a0dc14659d79 *R/hier_add.R
 0e0a10173206f00d1ee2af67eec860a7 *R/hier_app.R
@@ -10,6 +10,7 @@ e8d398b8f1465cdfc6a4b50868458d7c *R/hier_compute.R
 b30c7e5bc67c4587b3c475ecf1cbad0e *R/hier_delete.R
 177352d5dc5d893cb78c9577d686501a *R/hier_display.R
 caf0d97f9524ae7ffdb8315a86c86ea7 *R/hier_export.R
+d149d35a1c7d65dd4b4ca391487da479 *R/hier_grid.R
 926c805adefaa572f247c0723dec5e02 *R/hier_helpers.R
 eef26f2d9ff7fa8d0bc2c2b00c8ee087 *R/hier_import.R
 49ebba81211ce081ac634bf795be2613 *R/hier_info.R
@@ -20,7 +21,7 @@ a53eed4f402e7f50d5ebdfa5384590fa *R/hier_to_tree.R
 19d1d930182f54ff334522c8c368cf49 *R/hier_vignette.R
 b480009ed153c4d636d4734732ee315d *R/zzz.R
 058899666544d52d2ba9dc0c6955acda *README.md
-377bef6ad63c6db136408b8c169f1d96 *build/vignette.rds
+f43b8f488c54814bc1d129b58dcaa3f1 *build/vignette.rds
 dfcd661c3c88b5c56bbb6f226b0e02e9 *inst/app/controllers/observers_common.R
 9205be608de14b7b614131d1d4969d71 *inst/app/controllers/observers_create.R
 bd0151a193035c191dc8269d33f0ed58 *inst/app/controllers/observers_modify.R
@@ -30,9 +31,9 @@ bd0151a193035c191dc8269d33f0ed58 *inst/app/controllers/observers_modify.R
 7d10013ba7b4f3d8d0682af33843842d *inst/app/global.R
 2d862e6d9609b02cdc9d0b3f58d6b024 *inst/app/server.R
 ff10e7d57d6709a719e37aa337e90847 *inst/app/ui.R
-8b30502b4411f10a2060ed6591cb67fa *inst/doc/usage.R
-c299cac18ef248638bdcf8cdb0e95a4c *inst/doc/usage.Rmd
-4daf7d4e8131a35f2a93e83104d71a45 *inst/doc/usage.html
+2559087665f427f77a5750c88a40c3f4 *inst/doc/usage.R
+b7ac1c54346962d9d0824659908417a1 *inst/doc/usage.Rmd
+7729fe42c0beae4c243ce9eab39d65f2 *inst/doc/usage.html
 07cf2d8f421a36d4acb3038a1cdfb037 *man/hier_add.Rd
 58767d990e40c05597fc7ebf38fad882 *man/hier_app.Rd
 3f7cd35220c583f93042323cee0bdf22 *man/hier_compute.Rd
@@ -41,6 +42,7 @@ c299cac18ef248638bdcf8cdb0e95a4c *inst/doc/usage.Rmd
 faefde92cbf14e1644e9ff3fbeb2ac19 *man/hier_delete.Rd
 f13c9c33fca633c6e963747888c86d3a *man/hier_display.Rd
 3a2f8fa91b7fa17d938aa05c941fca4e *man/hier_export.Rd
+14c9b8a80f20470e24b660e56baad7df *man/hier_grid.Rd
 2803e57c0b05da7ad9f111c26106d902 *man/hier_import.Rd
 ed4bdad2148e7673f38082d181c9a74b *man/hier_info.Rd
 375151ccda07e43da4e0d4a3ab22faeb *man/hier_match.Rd
@@ -53,9 +55,10 @@ b7a17e2540e24383671d7dcfad6d78b1 *tests/testthat.R
 3891d5e606adf068d572da66352b2b54 *tests/testthat/hrc/hrc2.hrc
 134a05c3f3f8304278cb008e2fd27231 *tests/testthat/test_additional.R
 2bff100b23e8bdf1d05647328676738c *tests/testthat/test_compute.R
+a920995a91b01d3dc1136ccd81d23aa2 *tests/testthat/test_hier_grid.R
 64219f63c964e51a909fc583c015d02c *tests/testthat/test_hier_match.R
 21eaf114c12c737f7122685475550a19 *tests/testthat/test_hier_to_tree.R
 443bd2d7936b22bd27cc6fe37873cdf9 *tests/testthat/test_import_compute.R
 2a18274076db22461a09493ac2a024de *tests/testthat/test_issue7.R
 07c2f8af8118439149ccb6208f8dde7c *tests/testthat/test_issue8.R
-c299cac18ef248638bdcf8cdb0e95a4c *vignettes/usage.Rmd
+b7ac1c54346962d9d0824659908417a1 *vignettes/usage.Rmd
