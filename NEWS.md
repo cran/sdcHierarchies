@@ -1,3 +1,8 @@
+# sdcHierarchies 0.19.0
+- major performance improvements by rewriting utility-functions in Rcpp
+- bugfix in `hier_app()` when exporting;
+- feature: `hier_grid()` got new argument `add_default_codes`; if `TRUE`, columns containing standardized codes are automatically added
+
 # sdcHierarchies 0.18.3
 - bugfix when converting hierarchies to sdc-objects.
 
