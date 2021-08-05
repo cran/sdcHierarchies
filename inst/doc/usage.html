@@ -12,7 +12,7 @@
 
 <meta name="author" content="Bernhard Meindl" />
 
-<meta name="date" content="2021-07-20" />
+<meta name="date" content="2021-08-05" />
 
 <title>Usage of the sdcHierarchies-Package</title>
 
@@ -141,7 +141,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <h1 class="title toc-ignore">Usage of the sdcHierarchies-Package</h1>
 <h4 class="author">Bernhard Meindl</h4>
-<h4 class="date">2021-07-20</h4>
+<h4 class="date">2021-08-05</h4>
 
 
 
@@ -189,9 +189,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## │ └─b1
 ## │   ├─b1_a
 ## │   └─b1_b
-## ├─E
 ## ├─X
-## └─Y</code></pre>
+## ├─Y
+## └─E</code></pre>
 <p>We note that the underlying <a href="https://cran.r-project.org/package=data.tree"><strong>data.tree</strong></a> package allows to modify the objects on reference so no explicit assignment of the form is required.</p>
 </div>
 <div id="information-about-nodes" class="section level2">
@@ -246,20 +246,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># conversion to a &quot;@;label&quot;-based format</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>res_df <span class="ot">&lt;-</span> <span class="fu">hier_convert</span>(h, <span class="at">as =</span> <span class="st">&quot;df&quot;</span>)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(res_df)</span></code></pre></div>
-<pre><code>##   level  name
-## 1     @ Total
-## 2    @@     A
-## 3    @@     B
-## 4   @@@    b1
-## 5  @@@@  b1_a
-## 6  @@@@  b1_b
-## 7    @@     E
-## 8    @@     X
-## 9    @@     Y</code></pre>
+<pre><code>##    level  name
+## 1:     @ Total
+## 2:    @@     A
+## 3:    @@     B
+## 4:   @@@    b1
+## 5:  @@@@  b1_a
+## 6:  @@@@  b1_b
+## 7:    @@     X
+## 8:    @@     Y
+## 9:    @@     E</code></pre>
 <p>The required code to create this hierarchy could be computed using:</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>code <span class="ot">&lt;-</span> <span class="fu">hier_convert</span>(h, <span class="at">as =</span> <span class="st">&quot;code&quot;</span>); <span class="fu">cat</span>(code, <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span></code></pre></div>
 <pre><code>## library(sdcHierarchies)
-## tree &lt;- hier_create(root = &#39;Total&#39;, nodes = c(&#39;A&#39;, &#39;B&#39;, &#39;E&#39;, &#39;X&#39;, &#39;Y&#39;))
+## tree &lt;- hier_create(root = &#39;Total&#39;, nodes = c(&#39;A&#39;, &#39;B&#39;, &#39;X&#39;, &#39;Y&#39;, &#39;E&#39;))
 ## tree &lt;- hier_add(tree = tree, root = &#39;B&#39;, nodes = &#39;b1&#39;)
 ## tree &lt;- hier_add(tree = tree, root = &#39;b1&#39;, nodes = c(&#39;b1_a&#39;, &#39;b1_b&#39;))
 ## print(tree)</code></pre>
@@ -541,52 +541,52 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>##        v1    v2
 ##  1: Total Total
 ##  2:     A Total
-##  3:     B Total
-##  4:     C Total
-##  5:    a1 Total
-##  6:   aa1 Total
+##  3:    a1 Total
+##  4:   aa1 Total
+##  5:     B Total
+##  6:     C Total
 ##  7: Total     a
 ##  8:     A     a
-##  9:     B     a
-## 10:     C     a
-## 11:    a1     a
-## 12:   aa1     a
+##  9:    a1     a
+## 10:   aa1     a
+## 11:     B     a
+## 12:     C     a
 ## 13: Total     b
 ## 14:     A     b
-## 15:     B     b
-## 16:     C     b
-## 17:    a1     b
-## 18:   aa1     b
-## 19: Total     c
-## 20:     A     c
-## 21:     B     c
-## 22:     C     c
-## 23:    a1     c
-## 24:   aa1     c
-## 25: Total     d
-## 26:     A     d
-## 27:     B     d
-## 28:     C     d
-## 29:    a1     d
-## 30:   aa1     d
-## 31: Total     e
-## 32:     A     e
-## 33:     B     e
-## 34:     C     e
-## 35:    a1     e
-## 36:   aa1     e
-## 37: Total    b1
-## 38:     A    b1
-## 39:     B    b1
-## 40:     C    b1
-## 41:    a1    b1
-## 42:   aa1    b1
-## 43: Total    d1
-## 44:     A    d1
-## 45:     B    d1
-## 46:     C    d1
-## 47:    a1    d1
-## 48:   aa1    d1
+## 15:    a1     b
+## 16:   aa1     b
+## 17:     B     b
+## 18:     C     b
+## 19: Total    b1
+## 20:     A    b1
+## 21:    a1    b1
+## 22:   aa1    b1
+## 23:     B    b1
+## 24:     C    b1
+## 25: Total     c
+## 26:     A     c
+## 27:    a1     c
+## 28:   aa1     c
+## 29:     B     c
+## 30:     C     c
+## 31: Total     d
+## 32:     A     d
+## 33:    a1     d
+## 34:   aa1     d
+## 35:     B     d
+## 36:     C     d
+## 37: Total    d1
+## 38:     A    d1
+## 39:    a1    d1
+## 40:   aa1    d1
+## 41:     B    d1
+## 42:     C    d1
+## 43: Total     e
+## 44:     A     e
+## 45:    a1     e
+## 46:   aa1     e
+## 47:     B     e
+## 48:     C     e
 ##        v1    v2</code></pre>
 <p>separating all target hierarchies with a <code>,</code>. <code>hier_grid</code> then computes all combinations of codes from hierarchies <code>h1</code> and <code>h2</code>. Using the default options, these bogus codes are included in the output <code>data.table</code>. Setting argument <code>add_dups = FALSE</code> removes all rows containing such bogus codes. Setting option <code>add_levs = TRUE</code> adds some columns labeled <code>levs_v{n}</code> to the output data set. Each of this colum contains values which define the hierarchy level of the corresponding code given in variable v{n} in the same row in the table as shown below.</p>
 <div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hier_grid</span>(h1, h2, <span class="at">add_dups =</span> <span class="cn">FALSE</span>, <span class="at">add_levs =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
