@@ -1,3 +1,6 @@
+# sdcHierarchies 0.19.2
+- update tests to reflect changes in `cli`-package
+
 # sdcHierarchies 0.19.1
 - fix: use original order in `hier_display()` and `hier_convert()`
 - feature: new function `hier_codes()` returning a named vector of node-named and its standardized codes

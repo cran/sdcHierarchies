@@ -1,6 +1,6 @@
-d6f14c7fe2a47be9ad93fa2ad11f7746 *DESCRIPTION
+c9df519951c4430c6656d1f5d7b7df65 *DESCRIPTION
 a69933128aaf02957a31b7c8c69dc262 *NAMESPACE
-6b0674ad0ba281958d258738f19a2ce6 *NEWS.md
+f53aa13e33cd10cee3728ee8bfa9f08e *NEWS.md
 cc2325a1f691f191a2e5984c6a8d770d *R/0imports.R
 bc34834800fa6eea738e0578bc45abbc *R/RcppExports.R
 a223e0de196ea545b3b3fffdd8ee51b4 *R/hier_add.R
@@ -23,8 +23,8 @@ a53eed4f402e7f50d5ebdfa5384590fa *R/hier_to_tree.R
 710ce11a68114e500854078bb38cb680 *R/hier_vignette.R
 6fd0dc4b770007e7322d7649b717db08 *R/sdcHierarchies-package.R
 b480009ed153c4d636d4734732ee315d *R/zzz.R
-2cb275cf56b3b4639830475d17e7c67e *README.md
-f1ac24f857109ca2bed6865cb7af9fc1 *build/vignette.rds
+d831de02ce9d95bc84c2555864708cb4 *README.md
+9f81a956c12a75133a9ef63ce89a9ebc *build/vignette.rds
 e3c6c1c6e8a964510e0099f9ad3e7d07 *inst/app/controllers/observers_common.R
 9205be608de14b7b614131d1d4969d71 *inst/app/controllers/observers_create.R
 bd0151a193035c191dc8269d33f0ed58 *inst/app/controllers/observers_modify.R
@@ -36,7 +36,7 @@ bd0151a193035c191dc8269d33f0ed58 *inst/app/controllers/observers_modify.R
 ff10e7d57d6709a719e37aa337e90847 *inst/app/ui.R
 464c53cd8033769394fb3f6cc933b2a7 *inst/doc/usage.R
 b7ac1c54346962d9d0824659908417a1 *inst/doc/usage.Rmd
-76c511d61fb374bc19050794b45609d9 *inst/doc/usage.html
+7cc093c95b8c04633010a94d4fe62b32 *inst/doc/usage.html
 7031a17bdfa1d4953ffb416529c2aa54 *man/hier_add.Rd
 370572829cce1affd6d49bfa4058f178 *man/hier_app.Rd
 5ee33c766aa4eb92f0ace74cf8fad6f5 *man/hier_codes.Rd
@@ -60,7 +60,7 @@ b7a17e2540e24383671d7dcfad6d78b1 *tests/testthat.R
 7799a3ac729bb7ab4dd95c586a06ba47 *tests/testthat/hrc/hrc1.hrc
 3891d5e606adf068d572da66352b2b54 *tests/testthat/hrc/hrc2.hrc
 1291d910c9244abee14bd86278a1e0b9 *tests/testthat/test-hier_codes.R
-9bddf41be11f1b1f3a9a4d7ccf4453e9 *tests/testthat/test_additional.R
+5ee5e99f8494b81f6119b7873cc35176 *tests/testthat/test_additional.R
 2bff100b23e8bdf1d05647328676738c *tests/testthat/test_compute.R
 587bc296a25303816b9cd8b4155fc350 *tests/testthat/test_hier_grid.R
 64219f63c964e51a909fc583c015d02c *tests/testthat/test_hier_match.R
