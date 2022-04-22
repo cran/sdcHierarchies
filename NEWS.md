@@ -1,3 +1,6 @@
+# sdcHierarchies 0.19.3
+- bugfix in computation of bogus-codes
+
 # sdcHierarchies 0.19.2
 - update tests to reflect changes in `cli`-package
 
