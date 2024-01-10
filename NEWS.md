@@ -1,5 +1,11 @@
+# sdcHierarchies 0.21.0
+- allow to keep original-order of nodes in `hier_import()` via argument `keep_order`
+
 # sdcHierarchies 0.20.0
 - massive performance improvement in `hier_convert()`
+
+# sdcHierarchies 0.19.4
+- really return `NULL` in `hier_display()`
 
 # sdcHierarchies 0.19.3
 - bugfix in computation of bogus-codes
