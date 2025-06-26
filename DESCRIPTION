@@ -1,9 +1,9 @@
 Package: sdcHierarchies
 Type: Package
 Title: Create and (Interactively) Modify Nested Hierarchies
-Version: 0.21.0
-Date: 2024-01-10
-Authors@R: c(person("Bernhard", "Meindl", email = "bmeindl1981@gmail.com", role = c("aut", "cre")))
+Version: 0.22.0
+Date: 2025-06-26
+Authors@R: c(person("Bernhard", "Meindl", email = "bernhard.meindl@statistik.gv.at", role = c("aut", "cre")))
 Description: Provides functionality to generate, (interactively) modify (by adding, removing and renaming nodes) and convert nested hierarchies between different formats.
   These tree like structures can be used to define for example complex hierarchical tables used for statistical disclosure control.
 License: GPL-3
@@ -13,13 +13,14 @@ Imports: shiny, shinyjs, shinyTree, jsonlite, rlang, data.table, cli,
 Encoding: UTF-8
 Suggests: knitr, rmarkdown, testthat
 VignetteBuilder: knitr
-URL: https://github.com/bernhard-da/sdcHierarchies
+URL: https://github.com/bernhard-da/sdcHierarchies,
+        https://bernhard-da.github.io/sdcHierarchies/
 BugReports: https://github.com/bernhard-da/sdcHierarchies/issues
 LinkingTo: Rcpp
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2
 NeedsCompilation: yes
-Packaged: 2024-01-10 05:09:40 UTC; meindl
+Packaged: 2025-06-26 06:47:13 UTC; meindl
 Author: Bernhard Meindl [aut, cre]
-Maintainer: Bernhard Meindl <bmeindl1981@gmail.com>
+Maintainer: Bernhard Meindl <bernhard.meindl@statistik.gv.at>
 Repository: CRAN
-Date/Publication: 2024-01-10 06:20:02 UTC
+Date/Publication: 2025-06-26 07:50:02 UTC

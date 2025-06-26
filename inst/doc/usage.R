@@ -3,7 +3,7 @@ library(rmarkdown)
 library(sdcHierarchies)
 
 ## ----eval = FALSE-------------------------------------------------------------
-#  library(sdcHierarchies)
+# library(sdcHierarchies)
 
 ## -----------------------------------------------------------------------------
 h <- hier_create(root = "Total", nodes = LETTERS[1:5])
@@ -39,7 +39,7 @@ print(res_df)
 code <- hier_convert(h, as = "code"); cat(code, sep = "\n")
 
 ## ----eval=FALSE---------------------------------------------------------------
-#  hier_export(h, as = "argus", path = file.path(tempfile(), "hierarchy.hrc"))
+# hier_export(h, as = "argus", path = file.path(tempfile(), "hierarchy.hrc"))
 
 ## ----eval=TRUE----------------------------------------------------------------
 n_df <- hier_import(inp = res_df, from = "df")
@@ -126,5 +126,5 @@ hier_grid(h1, h2)
 hier_grid(h1, h2, add_dups = FALSE, add_levs = TRUE)
 
 ## ----eval=FALSE---------------------------------------------------------------
-#  d <- hier_app(d)
+# d <- hier_app(d)
 
