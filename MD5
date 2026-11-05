@@ -1,6 +1,6 @@
-0433d3edb9a47299dc701f64e65899a5 *DESCRIPTION
-f61a785ec704ab8614ec8fc2887c1d4b *NAMESPACE
-b7d4c160b5343847a56adeb63f2f6ca0 *NEWS.md
+07275560e9f400a6ad3221bfbcdd97fb *DESCRIPTION
+1269e70f227ab4fda7b716aacee98496 *NAMESPACE
+5ac22e80672e25dd2e803519278d5e78 *NEWS.md
 cc2325a1f691f191a2e5984c6a8d770d *R/0imports.R
 303cd3e330121aac42a957593b5edb22 *R/RcppExports.R
 a223e0de196ea545b3b3fffdd8ee51b4 *R/hier_add.R
@@ -15,7 +15,7 @@ d355d0f99a1beed7a15a58b7c87d8235 *R/hier_display.R
 503a1717be6c4a5a113c1cc944bea161 *R/hier_export.R
 dcc923aad0ba01ca869c95e92d9bb358 *R/hier_grid.R
 b9536db13b3e206be2b897ec1324c9a3 *R/hier_helpers.R
-2cac6f36762bbe44e05883f4c57f228b *R/hier_import.R
+048b942b39013137dd4b2fb9142769e2 *R/hier_import.R
 b70b5a89d509a6850dc0540c8f4cd29f *R/hier_info.R
 99b51710484543014ed340cda71b5e93 *R/hier_match.R
 9ef25a63e6781bee6343f06869f3cfc5 *R/hier_nodenames.R
@@ -25,7 +25,7 @@ a53eed4f402e7f50d5ebdfa5384590fa *R/hier_to_tree.R
 6fd0dc4b770007e7322d7649b717db08 *R/sdcHierarchies-package.R
 b480009ed153c4d636d4734732ee315d *R/zzz.R
 47d2a907622611937cfd76d4074add31 *README.md
-57e4e5e85ca68fd526de1957a4da3bc7 *build/vignette.rds
+d9d4da12b7dc1f8d908ee22ec2a25f33 *build/vignette.rds
 e3c6c1c6e8a964510e0099f9ad3e7d07 *inst/app/controllers/observers_common.R
 9205be608de14b7b614131d1d4969d71 *inst/app/controllers/observers_create.R
 bd0151a193035c191dc8269d33f0ed58 *inst/app/controllers/observers_modify.R
@@ -37,7 +37,7 @@ bd0151a193035c191dc8269d33f0ed58 *inst/app/controllers/observers_modify.R
 ff10e7d57d6709a719e37aa337e90847 *inst/app/ui.R
 c2b7004cabc3114b5f76bc6d93d4d569 *inst/doc/usage.R
 2ef08e65726c95a5aac957527ff29aa1 *inst/doc/usage.Rmd
-7130ebbdad313c49c121f0b5358583d6 *inst/doc/usage.html
+e711722751b7304a6de16d67e643f828 *inst/doc/usage.html
 7031a17bdfa1d4953ffb416529c2aa54 *man/hier_add.Rd
 370572829cce1affd6d49bfa4058f178 *man/hier_app.Rd
 4ef5649a9d61198b8355dcf5cf6a6312 *man/hier_codes.Rd
